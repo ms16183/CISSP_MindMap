@@ -1,0 +1,337 @@
+---
+title: CISSP MindMap
+markmap:
+  initialExpandLevel: 2
+---
+
+# Domain 1
+# Domain 2
+# Domain 3
+# Domain 4
+# Domain 5
+- Pricipals of Access Control
+  - Least Privilege
+  - Separation of Duties
+  - Need to Know
+- IAAA
+  - Identify
+    - Username
+    - ID
+    - E-Mail
+  - Authentication
+    - Something You Know(Type I)
+      - Password
+        - NIST SP 800-63B
+          - Hasing
+          - 8-64 length
+          - No need rotating
+      - Passphrase
+      - Questions
+    - Something You Have(Type II)
+      - ID card
+      - Mobile phone
+      - OTP
+        - Syncronous OTP
+        - Asynchronous OTP
+        - Soft Tokens
+        - Hard Tokens
+    - Something You Are(Type III)
+      - Biometrics
+        - Zephyr Chart
+        - Retina
+        - Iris
+        - Vasucular pattern
+        - Fingerprint
+        - Facial
+        - Voice
+        - Parameters
+          - FRR(False Reject Rate(Type I))
+          - FAR(False Accept Rate(Type II))
+          - CEE(Crossover Error Rate)
+    - Somewhere You Are(Type IV)
+      - IP Geolocation
+      - GPS
+  - Authorization
+    - DAC
+    - MAC(Ratice based)
+      - Hierarchical
+      - Compartmentalization
+    - RBAC
+    - RuBAC
+    - ABAC
+  - Acccounting
+    - Logging
+    - Non-repudiation
+- Account Management
+  - JIT
+  - Provisioning
+    - Entitlement
+  - Deprovisioning
+  - Access type
+    - Permission
+      - オブジェクトに対するアクション
+    - Rights
+      - システムに対するアクション
+    - Privilege
+      - Permission + Rights
+      - Full control
+- SSO
+  - Kerbros
+    - KDC
+      - AS
+      - TS
+    - TGT(Ticket Granting Ticket)
+    - ST(Service Ticket)
+- Federation
+  - OIDC
+  - OAuth
+    - `state`
+  - SAML
+    - Assertion
+    - Profiles
+    - Bindings
+    - Protocol
+- Protocols
+  - AAA
+    - RADIUS
+      - IEEE 802.x
+    - ~~Diameter~~
+    - TACACS+
+      - CISCO
+  - Directory
+    - DAP(X.500)
+    - LDAP
+    - LDAPS
+    - ADSI
+      - LDAP/WinNT/Novell NDS
+    - DSML
+      - via HTTP
+- ZTA
+  - Policy Engine
+  - Policy Administrator
+  - Policy Enforcement Point
+# Domain 6
+- Vulnabilities assessment
+  - SCAP
+    - CWE
+    - CVE
+    - CVSS
+    - CPE
+    - XCCDF
+    - OVAL
+  - Microsoft Security Bulletins
+  - ~~Bugtraq~~
+- Penetration testing
+  - NIST SP 800-114
+    - Planning
+    - Discoery
+    - Attack
+    - Reporting
+  - Method
+    - Whitebox
+    - Graybox
+    - Blackbox
+  - DAST
+  - SAST
+  - Tools
+    - Vulnerabilities scanner
+      - Nessus
+      - OpenSCAP
+    - Port scanner
+      - Nmap
+    - Web scanner
+      - Nikto
+      - BurpSuite
+      - OWASP ZAP
+    - SQLi
+      - sqlmap
+    - Fuzzer
+      - zuff
+      - dirb
+      - ffuf
+      - gobuster
+
+# Domain 7
+- Collect & Control Evidence
+  - Locard's Priciples
+  - Digital Forensics
+    - Chain of custody
+  - eDiscovery
+- Evidence
+  - Evidence Rule
+    - Authentic(真正性)
+    - Accurate(正確性)
+    - Complete(網羅性)
+    - Convinicing(客観性)
+    - Admissible(合法収集)
+  - Evidence type
+    - 物的証拠
+      - 物理的な証拠
+        - USBメモリ/HDD
+    - 直接証拠
+      - 事件の事実を示す証拠
+        - 有形/無形
+        - 目撃者
+        - 自白
+        - Smoking gun(動かぬ証拠の慣用句)
+    - 二次的証拠
+      - 原文から複製された証拠
+        - 印刷されたログ
+    - 原則
+      - 最良証拠の原則
+      - 伝聞証拠排除の原則
+      - 口頭証拠排除の原則
+- Investigateions type
+  - Civil(民事)
+    - 裁判所による当事者間の争いの解決
+    - Preponderance of the evidence(証拠の優越性)
+  - Criminal(刑事)
+    - 法執行機関による調査
+    - Beyond a reasonable doubt(合理的な疑いの余地が無い)証拠
+  - Regulatory(規制)
+    - 業界標準を遵守しているか
+  - Administrative(行政/管理)
+    - 組織内部の調査
+    - 行政の翻訳に騙されないこと
+
+- IR(Incident Response)
+  - NIST SP 800-61
+    1. Detection
+       - IDS/IPS/SIEM/DLP/XDR
+       - Hotline/Reporting desk
+    2. Response
+       - Responses the CSIRT
+    3. Mitigation
+       - Solve the problem
+       - 被害の最小限化
+    4. Reporting
+       - 組織内外への報告
+    5. Recovery
+       - システムの完全復旧
+    6. Remediation
+       - 脆弱性情報の横展開
+    7. Lessons & Learned
+       - 振り返り
+- BCM(Business Continuity Management)
+  - BIA(Business Impact Analysis/Assesment)
+    - Identify Critical Processes & Systems
+    - Time
+      - RTO
+      - MTD
+      - WRT
+      - RPO
+  - Plans
+    - BCP(Business Continuity Plan)
+    - DRP(Disaster Recovery Plan)
+    - CCP(Crisis Communications Plan)
+    - CoOP(Continuity of Operations Plan)
+    - CIR(Cyber Incident Recovery)
+    - OEP(Occupant Emergency Plan)
+    - BRP(Business Recocery Plan)
+    - CMP(Crisis Management Plan)
+  - Testing
+    - Full interruption test
+    - Parallel test
+    - Tabletop exercise
+    - Walkthrough
+    - Checklist
+  - Recovery strategies
+    - Sites
+      - Cold site
+      - Warm site
+      - Hot site
+      - Mirror site
+      - Mobile site
+    - Copying
+      - Electric vaulting
+        - スケジュールされた時間にバックアップを自動転送
+      - Jounaling
+        - スケジュールされた時間にトランザクションログを自動転送
+      - Shadowing
+        - ミラーリング
+    - RAID
+      - Striping(RAID 0)
+      - Mirroring(RAID 1)
+      - Striping & Mirroring(RAID 10)
+      - Parity(RAID 5)
+      - Double parity(RAID 6)
+    - Backup
+      - GFS(Grandfather/Father/Son)
+      - Tower of Hanoi
+      - Six Cartridge Weekly
+    - Clustring
+      - High Availability
+      - Load Balancing
+- Change Management
+  - Change request
+  - Assessment
+    - Emergency
+    - Standard
+  - Approval
+  - Testing
+    - Regression testing
+    - Mutation testing
+  - Planning
+  - Documentation
+# Domain 8
+- SLC
+  - SDLC
+    - Concept definition
+    - Requirements
+    - Architecture & Design
+    - Development
+      - Waterfall
+        - Repeatable Watferfall
+      - Spiral
+      - Agile
+        - Scrum
+        - Kanban
+        - XP
+        - SAFe
+      - DevOps
+        - DevSecOps
+        - DevQAOps
+    - Testing
+      - Coverage
+        - Code Coverage
+      - Misuse Test
+      - Interface Test
+    - Operation
+      - Monitoring
+        - Active Monitoring
+        - Passive Monitoring
+          - RUM 
+- MM(Maturity Model)
+  - CCM(Capability Maturity Model)
+    - Initial
+    - Repeatable
+    - Defined
+    - Managed
+      - 定量評価
+    - Optimizing
+  - SAMM(Software Assurance Maturity Model)
+    - Governance
+    - Design
+    - Implementation
+    - Verification
+    - Operations
+
+- Acquire Softwares
+  - SLA
+  - Contracts
+  - MOU
+- Vulnerabilities
+  - SQLi
+  - XSS
+  - CSRF
+  - SSRF
+  - BoF
+  - Race Conditions
+  - TOC/TOU
+  - Citizen Developers
+  - Backdoor(Trapdoors)
+- Secure Programming
+  - Code Review
+  - Input Validation on server side
+  - Session Management
+  - Polyinstantation
