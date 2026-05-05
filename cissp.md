@@ -1,13 +1,269 @@
 ---
 title: CISSP MindMap
 markmap:
-  initialExpandLevel: 2
+  #initialExpandLevel: 6
+  extraJs:
+    - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 ---
 
 # Domain 1
 # Domain 2
 # Domain 3
+- Principles of safe design
+  - Least Privilege
+  - Defence in Depth
+  - Segragation of Duties
+  - Dual Castory(Quorum Authentication)
+    - M of N access control
+  - PbD(privacy by Design)
+  - Secure Default
+  - Shared Responsibility with CSP☁️
+  - KISS🤪
+- Security Frameworks
+  - ISO 27001
+  - ISO 27002
+  - ITIL
+  - FISMA
+  - FedRAMP
+  - Cyber Kill Chain
+  - NIST SP 800-53
+- Security Model
+  - Enterprise
+    - ToGAF
+    - Zachman
+    - Sabsa
+  - Lattice Based(MAC)
+    - Bell-LaPadula
+      - Simple security attribute
+      - \* security attribute
+    - Biba
+      - Simple integrity attribute
+      - \* integrity attribute
+    - Lipner
+  - Rule Based
+    - Clark-Wilson
+      - Integrity Veification Procedure
+      - Transformation Procedure
+    - Brewer-Nash
+    - Graham-Denning
+    - Harrison-Ruzzo-Ullman
+- TCB(Trusted Computing Base)
+  - Reference Monitor
+    - Security Kernel
+      - Completness: 全てカーネルを経由すること
+      - Isolation: カーネル自体があらゆる不正アクセスから保護されること
+      - Verifiability: カーネルが設計仕様への適合を証明すること
+  - Perimeter
+  - Trusted hardware
+    - TPM chip
+    - Fortezza PC card
+    - iButton
+  - Process isolation
+    - Memory Segmentation
+    - Time division multiplexing
+  - Processor states
+    - Problem
+    - Supervisor
+  - Ring protection Model
+    - Ring 0: Kernel
+    - Ring 3: User program
+- Safety of people
+  - Control categories
+    - Deter
+    - Delay
+    - Detect
+    - Assess
+    - Respond
+  - Physical control
+    - Lighting
+      - Emergency Lighting
+      - Tripped Lighting
+    - Monitoring
+      - CCTV
+      - Passive RIP sensor
+      - Wave motion sensor
+      - Sound sensor
+      - BMS
+      - RIP Linear Beam sensor
+    - Locks
+    - Fencing
+      - High fence
+      - Partition
+    - Doors
+      - Card readers
+      - Mantrap
+      - Turnstile
+      - Carbonated door
+    - Security guard
+    - Robot
+    - Anti vehicle
+      - Bollard
+      - Spike
+  - Disaster
+    - Outages⚡
+      - UPS
+      - Generator
+      - Dual power plant
+      - Dual degradation
+    - HVAC(Heat, Ventilation, Air Conditioning)🌡️️☁🍃
+      - Static electricity
+      - Chip cleap
+      - Cold/Hot Aile
+    - Fire🔥
+      - Exitinguisher
+        - A: 可燃物
+        - B: 液体
+        - C: 電気
+        - D: 金属
+        - K: キッチン
+      - Sprinkler
+        - Wet
+        - Practive
+        - Dry
+        - Deluge: 一斉開放
+      - AFFF(Aqueous Firefighting Foam)
+      - CO2
+      - Gas
+        - Inergen
+        - Haron
+        - FM-200
+        - Aero-K
+        - Argonite
+      - Firefighting
+        - Axe
+        - Pipe
+    - Water💧
+      - Pipe segregation
+      - Avoid near rivers
 # Domain 4
+- Network architecture
+  - Internet
+    - GAN
+    - WAN
+    - MAN
+    - LAN
+    - PAN
+  - Intranet
+  - Extranet
+    - Network sharing with stakeholders
+- Netrwork topology
+  - Bus
+  - Star
+  - Ring
+  - Mesh
+  - Tree
+- Transport architecture
+  - Cut-Thorugh
+  - Store-and-Forward
+- Traffic flow
+  - North-South traffic
+  - East-West traffic
+- Netowork Authentication
+  - IEEE 802.1X
+    - PAP
+    - CHAP
+    - EAP
+      - LEAP
+      - PEAP
+      - EAP-POTP
+      - TLS
+- Wireless
+  - Satcom(Satellite Communication)
+    - LEO
+    - MEO
+    - GEO
+  - IEEE 802.11(Wi-Fi)
+    - Frequency
+      - 2.4GHz
+        - b
+        - g
+        - ax
+      - 5GHz
+        - a
+        - ac
+      - Both
+        - n
+    - Encryption
+      - WEP
+      - TKIP
+      - WPA/WPA2
+      - WPA3
+        - SAE(Simultaneous Authentication Of Equals)
+        - Enterprise
+          - IEEE 802.1X
+            - RADIUS
+        - Personal
+    - Setup
+      - WPS(Wiress Protected Setup)
+    - Topology
+      - AdHoc
+      - Infrastructure
+        - STA
+        - AP
+        - BSS
+        - ESS
+        - Roaming
+  - IEEE 802.15.1(Bluetooth)
+    - iBeacon
+    - Zigbee
+      - 128-bit Synmetric encription
+  - IEEE 802.16(WiMMax)
+  - RFID
+    - NFC
+      - WPA2/WPA3
+- Voice Communication
+  - PSTN(Public Switched Telephone Network)
+    - PBX(Private branch eXchange)
+  - VoIP
+  - Vishing
+- QoS
+  - Latency
+  - Throughput
+  - S/N ratio
+- OSI reference model
+  - Application
+    - HTTP/HTTPS
+    - FTP/FTPS
+    - TFTP
+    - DHCP
+    - DNS
+      - A/AAAA
+      - MX
+      - CNAME
+      - SOR
+    - SNMP
+    - SMTP
+    - POP3
+    - IMAP4
+  - Presentation
+    - ASCII/UTF-8
+    - MPEG
+    - JPEG
+  - Session
+    - iSCSI
+    - TLS
+    - Signal
+    - BGP
+  - Transport
+    - TCP
+    - UDP
+  - Network
+    - IPv4
+    - IPv6
+    - ICMP/IGMP
+    - IPSec
+  - Datalink
+    - Ethernet
+      - IBoE(InfiniBand over Ethernet)
+    - ARP
+    - PPP
+    - PAP
+    - CHAP
+    - EAP
+  - Physical
+    - Fiber Optic
+    - Twisted Pair
+    - Coaxial
 # Domain 5
 - Pricipals of Access Control
   - Least Privilege
@@ -39,6 +295,7 @@ markmap:
       - Biometrics
         - Zephyr Chart
         - Retina
+          - *PHI Privacy*
         - Iris
         - Vasucular pattern
         - Fingerprint
@@ -48,6 +305,10 @@ markmap:
           - FRR(False Reject Rate(Type I))
           - FAR(False Accept Rate(Type II))
           - CEE(Crossover Error Rate)
+      - Dynamics
+        - Keystroke
+        - Mouse
+        - Gait
     - Somewhere You Are(Type IV)
       - IP Geolocation
       - GPS
@@ -76,12 +337,41 @@ markmap:
       - Permission + Rights
       - Full control
 - SSO
-  - Kerbros
+  - Kerberos
     - KDC
       - AS
-      - TS
+      - TGS
     - TGT(Ticket Granting Ticket)
     - ST(Service Ticket)
+  - 
+    ```mermaid
+    sequenceDiagram
+      autonumber
+      participant Client as Client
+      participant AS as AS (Authentication Service)
+      participant TGS as TGS (Ticket Granting Service)
+      participant AP as AP (Application Server)
+
+      Note over AS, TGS: KDC (Key Distribution Center)
+
+      %% Step 1: Authentication Service Exchange
+      rect rgb(240, 240, 240)
+      Client->>AS: KRB_AS_REQ: Request for TGT
+      AS->>Client: KRB_AS_REP: TGT + Session Key 🗝️
+      end
+
+      %% Step 2: Ticket Granting Service Exchange
+      rect rgb(230, 245, 230)
+      Client->>TGS: KRB_TGS_REQ: TGT + Service Request
+      TGS->>Client: KRB_TGS_REP: Service Ticket + Service Session Key 🗝️
+      end
+
+      %% Step 3: Client/Server Exchange
+      rect rgb(230, 230, 255)
+      Client->>AP: KRB_AP_REQ: Service Ticket + Authenticator
+      AP->>Client: KRB_AP_REP: Mutual Authentication (Optional)
+      end 
+    ```
 - Federation
   - OIDC
   - OAuth
@@ -223,6 +513,7 @@ markmap:
   - Plans
     - BCP(Business Continuity Plan)
     - DRP(Disaster Recovery Plan)
+      - RASIS
     - CCP(Crisis Communications Plan)
     - CoOP(Continuity of Operations Plan)
     - CIR(Cyber Incident Recovery)
