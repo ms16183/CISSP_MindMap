@@ -9,6 +9,42 @@ markmap:
 # Domain 1
 # Domain 2
 # Domain 3
+- Cryptography
+  - Hashing
+    - MD5
+    - SHA-1
+    - SHA-2
+    - SHA-3
+  - Symmetric
+    - Block
+      - Modes
+        - ECB
+        - CBC
+        - CFB
+        - OFB
+        - CTR
+      - Algorithm
+        - DES
+        - 2DES
+        - 3DES
+        - AES(Rijndael)
+        - Blowfish
+    - Streaming
+      - RC4
+  - Asymmetric
+    - Algorithm
+      - El Gamal
+      - RSA
+      - DSA
+      - ECDSA
+    - KEX
+      - Diffie-Hellmann
+  - Classical
+    - Caesar Cypher
+    - Substitution Cypher
+    - Steganography
+  - Oracle
+    - One-time Pads
 - Principles of safe design
   - Least Privilege
   - Defence in Depth
@@ -19,6 +55,8 @@ markmap:
   - Secure Default
   - Shared Responsibility with CSP☁️
   - KISS🤪
+  - Zero Trust
+  - Trust But Verify
 - Security Frameworks
   - ISO 27001
   - ISO 27002
@@ -26,7 +64,20 @@ markmap:
   - FISMA
   - FedRAMP
   - Cyber Kill Chain
-  - NIST SP 800-53
+  - NIST SP 800-53(米国連邦情報システムのセキュリティ及びプライバシー管理の管理策)
+- Certification
+  - CC(Common Criteria)
+    - ISO 15408
+    - ST(Security Targets)/TOE: 対象の製品，製品のセキュリティコントロールを特定する文書
+    - PP(Protection Profile): 製品のセキュリティ要件が書かれた文書
+    - EAL
+      - ALE1: 機能的保証
+      - ALE2: 構造的保証
+      - ALE3: 系統的にテスト & チェック
+      - ALE4: 系統的に設計 & テスト & レビュー
+      - ALE5: 半正式的に設計 & テスト
+      - ALE6: 半正式的に検証済みの設計 & テスト
+      - ALE7: 正式に検証された設計 & テスト
 - Security Model
   - Enterprise
     - ToGAF
@@ -343,35 +394,6 @@ markmap:
       - TGS
     - TGT(Ticket Granting Ticket)
     - ST(Service Ticket)
-  - 
-    ```mermaid
-    sequenceDiagram
-      autonumber
-      participant Client as Client
-      participant AS as AS (Authentication Service)
-      participant TGS as TGS (Ticket Granting Service)
-      participant AP as AP (Application Server)
-
-      Note over AS, TGS: KDC (Key Distribution Center)
-
-      %% Step 1: Authentication Service Exchange
-      rect rgb(240, 240, 240)
-      Client->>AS: KRB_AS_REQ: Request for TGT
-      AS->>Client: KRB_AS_REP: TGT + Session Key 🗝️
-      end
-
-      %% Step 2: Ticket Granting Service Exchange
-      rect rgb(230, 245, 230)
-      Client->>TGS: KRB_TGS_REQ: TGT + Service Request
-      TGS->>Client: KRB_TGS_REP: Service Ticket + Service Session Key 🗝️
-      end
-
-      %% Step 3: Client/Server Exchange
-      rect rgb(230, 230, 255)
-      Client->>AP: KRB_AP_REQ: Service Ticket + Authenticator
-      AP->>Client: KRB_AP_REP: Mutual Authentication (Optional)
-      end 
-    ```
 - Federation
   - OIDC
   - OAuth
@@ -440,7 +462,6 @@ markmap:
       - dirb
       - ffuf
       - gobuster
-
 # Domain 7
 - Collect & Control Evidence
   - Locard's Priciples
@@ -534,12 +555,9 @@ markmap:
       - Mirror site
       - Mobile site
     - Copying
-      - Electric vaulting
-        - スケジュールされた時間にバックアップを自動転送
-      - Jounaling
-        - スケジュールされた時間にトランザクションログを自動転送
-      - Shadowing
-        - ミラーリング
+      - Electric vaulting: スケジュールされた時間にバックアップを自動転送
+      - Jounaling: スケジュールされた時間にトランザクションログを自動転送
+      - Shadowing: ミラーリング
     - RAID
       - Striping(RAID 0)
       - Mirroring(RAID 1)
@@ -609,8 +627,8 @@ markmap:
 
 - Acquire Softwares
   - SLA
-  - Contracts
   - MOU
+  - Contracts
 - Vulnerabilities
   - SQLi
   - XSS
@@ -621,7 +639,7 @@ markmap:
   - TOC/TOU
   - Citizen Developers
   - Backdoor(Trapdoors)
-- Secure Programming
+- Secure programming
   - Code Review
   - Input Validation on server side
   - Session Management
