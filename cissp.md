@@ -7,10 +7,85 @@ markmap:
 ---
 
 # Domain 1 <!-- markmap: fold -->
-- Security Governance
+- Ethics
+  - $\mathrm{(ISC)^2}$ Code of professional Ethics
+    1. 社会，公共，公益から求められる信頼と信用，インフラを守る．
+    2. 法律に違わず，公正かつ誠実に，責任を持って行動する．
+    3. 当事者に対して十分かつ適切なサービスを提供する．
+    4. 専門性を高め，維持する．
 - Privacy
-- Frameworks
-  - CSF(Cyber Security Framework)
+  - IP(Intellectual Property)
+    | 種類                       | 法規制                    | 管轄    | 有効期限        | 保護対象     |
+    | ------------------------ | ---------------------- | ----- | ----------- | -------- |
+    | 商標(TradeMark, (TM), (R)) | Lanham Act             | USPTO | 更新可能        | ロゴ，スローガン |
+    | 特許(Patent)               | -                      | USPTO | 20年         | 発明       |
+    | 営業秘密(Trade Secret)       | Economic Espionage Act | -     | 無し          | 営業秘密     |
+    | 著作権(Copyright, (C))      | DMCA                   | -     | 70年or没後 50年 | 創作物      |
+  - Licenses
+    - DMCA
+  - Import/Export
+    - COCOM: 冷戦時代にNATOからWTOへの輸出を抑制する委員会
+    - Wassenaar Arrangement: 通常兵器の蓄積を防止するための，輸入出品を追跡する仕組み
+      - 暗号化製品も対象
+    - EAR
+      - 域外適用(米国→日本→第三国でも規制適用)
+  - EU laws
+    - GDPR
+      - Lawfulness, fairness and transparency: 法的根拠を持って，オープンかつ誠実にデータを扱うこと
+      - Purpose limitation: データ収集の目的を文書化して開示すること
+      - Data minimization: 目的達成のために必要な最小限のデータのみを保持すること
+      - Accuracy: データを正確に維持すること
+      - Storage limitation: 必要な期間のみデータを保持すること
+        - 忘れられる権利: ユーザの要求に従ってデータを削除する．
+      - Integrity and confidentiality: 完全性と機密性を保持すること
+      - Accountability: データへのアクションについて説明責任が伴うこと
+  - US laws
+    - SOX: 上場企業へ財務報告の透明性及び文書化を定めた法律
+    - GLBA(Gramm-Leach-Bliley Act): 金融業での顧客情報共有時のセキュリティを強化する法律
+    - Amendent 4: 不当な捜査・押収から市民を保護する修正条文
+    - USA patriot Act: テロ抑止を目的とした法律
+      - CALEA: プロバイダ等の通信会社が政府の通信傍受を援助する
+      - CLOUD: 国境を越えて企業が保有するデータへのアクセス手順を定めた法律
+    - ECPA: 電子通信プライバシー法
+    - FERPA: 家族教育権利及びプライバシー法
+    - COPPA: 児童オンラインプライバシー保護法
+    - HIPAA: 医療保険の相互運用及び説明責任に関する法律
+      - プライバシーに焦点
+    - HITECH: 経済的及び臨床的健全性のための医療情報技術に関する法律
+      - セキュリティに焦点
+    - FISMA: 連邦情報セキュリティ管理法
+    - CFAA: コンピュータ不正行為防止法
+    - CCPA: カリフォルニア消費者プライバシー法
+  - Other laws
+    - PIPEDA: カナダの個人情報に関する法律
+    - PIPL: 中国のデータプライバシーに関する包括的な法律
+    - POPIA: 南アフリカの個人情報保護法
+- Responsibilities
+  - Due Diligence
+  - Due Care
+- Risk management frameworks
+  - CSF2.0(Cyber Security Framework 2.0)
+    - Core
+      - GOVERN; GV
+        サイバーセキュリティを確実にするための役割，責任及びポリシを策定し，周知及び監督する．
+      - IDENTIFY; ID
+        資産，リスクを理解し，カタログ化する．
+      - PROTECT; PR
+        資産とデータを保護する．
+      - DETECT; DE
+        インシデントを検知する仕組みを設ける．
+      - RESPOND; RS
+        インシデントの軽減策を設ける．
+      - RECOVERY; RC
+        インシデントの回復策を設ける．
+    - Tier: 適応レベル
+      - Tier 1: Partial
+      - Tier 2: Risk-Informed
+      - Tier 3: Repeatable
+      - Tier 4: Adaptive
+    - Profile: As-Is/To-Be
+      - Current profile
+      - Target profile
   - RMF(NIST SP 800-37 Rev)
     - Prepare
     - Categorize
@@ -35,8 +110,10 @@ markmap:
          - STRIDE
          - DREAD
          - PASTA
-         - VAST
-         - Trike
+       - Controls
+         - Physical control
+           - Technical control
+             - Administrative control
     3. Threatment
        - Tranfser
          - Cyber security insurance
@@ -55,6 +132,9 @@ markmap:
   - COSO
   - ISACA Risk IT
   - ISO 31000
+  - TARA
+  - FAIR
+  - OCTAVE
 # Domain 2 <!-- markmap: fold -->
 - Data role
   - Data owner
@@ -115,7 +195,7 @@ markmap:
          - Incinerate🔥
          - Spoil⚗️
          - Disintegrate🔨
-  - Assess & Review
+  4. Assess & Review
 # Domain 3 <!-- markmap: fold -->
 - Cryptography
   - Hashing
@@ -156,15 +236,17 @@ markmap:
 - Principles of safe design
   - Least Privilege
   - Defence in Depth
-  - Segragation of Duties
-  - Dual Castory(Quorum Authentication)
+    - Obscurity
+    - Data Hiding
+  - Segragation of Duties👥
+  - Dual Castory(Quorum Authentication)👥
     - M of N access control
-  - PbD(privacy by Design)
-  - Secure Default
+  - PbD(privacy by Design)🤫
+  - Secure Default🔐
   - Shared Responsibility with CSP☁️
   - KISS🤪
-  - Zero Trust
-  - Trust But Verify
+  - Zero Trust🚫
+    - Trust But Verify
 - Security Frameworks
   - ISO 27001
   - ISO 27002
@@ -426,10 +508,6 @@ markmap:
     - Twisted Pair
     - Coaxial
 # Domain 5 <!-- markmap: fold -->
-- Pricipals of Access Control
-  - Least Privilege
-  - Separation of Duties
-  - Need to Know
 - IAAA
   - Identify
     - Username
@@ -497,23 +575,23 @@ markmap:
     - Privilege
       - Permission + Rights
       - Full control
-- SSO
-  - Kerberos
-    - KDC
-      - AS
-      - TGS
-    - TGT(Ticket Granting Ticket)
-    - ST(Service Ticket)
-- Federation
-  - OIDC
-  - OAuth
-    - `state`
-  - SAML
-    - Assertion
-    - Profiles
-    - Bindings
-    - Protocol
 - Protocols
+  - SSO
+    - Kerberos
+      - KDC
+        - AS
+        - TGS
+      - TGT(Ticket Granting Ticket)
+      - ST(Service Ticket)
+  - Federation
+    - OIDC
+    - OAuth
+      - `state`
+    - SAML
+      - Assertion
+      - Profiles
+      - Bindings
+      - Protocol
   - AAA
     - RADIUS
       - IEEE 802.x
@@ -641,16 +719,22 @@ markmap:
        - 振り返り
 - BCM(Business Continuity Management)
   - BIA(Business Impact Analysis/Assesment)
-    - Identify Critical Processes & Systems
-    - Time
-      - RTO
-      - MTD
-      - WRT
-      - RPO
+    1. Identifying priorities
+       - RTO
+       - MTD
+       - WRT
+       - RPO
+    2. Risk identification
+       - Natural threats
+       - Person-made threats
+    3. Likelihood assessment
+       - $SLE = AV\times FE$
+    4. Impact analysis
+       - $ALE = ALO\times SLE$
+    5. Rsrouce prioritization
   - Plans
     - BCP(Business Continuity Plan)
     - DRP(Disaster Recovery Plan)
-      - RASIS
     - CCP(Crisis Communications Plan)
     - CoOP(Continuity of Operations Plan)
     - CIR(Cyber Incident Recovery)
