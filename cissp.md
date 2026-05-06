@@ -6,9 +6,117 @@ markmap:
     - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 ---
 
-# Domain 1
-# Domain 2
-# Domain 3
+# Domain 1 <!-- markmap: fold -->
+- Security Governance
+- Privacy
+- Frameworks
+  - CSF(Cyber Security Framework)
+  - RMF(NIST SP 800-37 Rev)
+    - Prepare
+    - Categorize
+    - Select
+    - Implement
+    - Assess
+    - Authorize
+    - Monitor
+  - Risk management(NIST SP 800-30)
+    1. Asset valuation
+       - Quantitative: 定量的
+       - Qualitative: 定性的
+    2. Risk analysis
+       - Quantitative
+         - $SLE = AV\times EF$
+           $ALE = SLE\times ARO$
+       - Qualitative
+         - Delphi method
+         - Brainstoming
+         - interviewing
+       - Threats models
+         - STRIDE
+         - DREAD
+         - PASTA
+         - VAST
+         - Trike
+    3. Threatment
+       - Tranfser
+         - Cyber security insurance
+       - Mitigate
+         - Safeguards
+           - Directive
+           - Deterrent
+           - Preventative
+         - Countermeasures
+           - Detective
+           - Corrective
+           - Recovery
+           - Compsensating
+       - Avoid
+       - Accept
+  - COSO
+  - ISACA Risk IT
+  - ISO 31000
+# Domain 2 <!-- markmap: fold -->
+- Data role
+  - Data owner
+  - Data steward
+  - Data custodian
+  - Data user
+  - Data controller
+  - Data processer
+  - <img src="./imgs/data_role.png" width="50%">
+- Data lifecycle
+  1. Classify
+     - Security document
+       - Policy
+       - Standard
+       - Baseline
+       - Guidline
+       - Procedure
+     - Labeling: system readable
+       | Level  | Government   | Nongovernment |
+       | ------ | :----------- | :------------ |
+       | Class3 | Top Secret   | Confidential  |
+       | Class2 | Secret       | Private       |
+       | Class1 | Confidential | Sensitive     |
+       | Class0 | Unclassfied  | Public        |
+     - Marking: human readable
+
+  2. Protect based on classification
+     - Use
+       - Data in Rest
+         - Encryption
+         - Access Control
+         - Backups to DR site
+       - Data in Transit
+         - DLP
+         - TLS
+         - VPN
+         - Onion
+       - Data in Use
+         - Print masking
+         - Release on memory
+     - Archive
+       - Retention period
+       - Sites
+         - DR
+         - CSP
+  3. Sanitize
+     - NIST SIP 800-88 Rev
+       - Clearing💥
+         - Formatting
+         - Overwriting
+         - Wipe
+       - Purging💥💥
+         - Degaussing
+         - ATA secure deletion
+         - Cryptographic shredding
+       - Destruction🗑️
+         - Shred✂️
+         - Incinerate🔥
+         - Spoil⚗️
+         - Disintegrate🔨
+  - Assess & Review
+# Domain 3 <!-- markmap: fold -->
 - Cryptography
   - Hashing
     - MD5
@@ -65,7 +173,7 @@ markmap:
   - FedRAMP
   - Cyber Kill Chain
   - NIST SP 800-53(米国連邦情報システムのセキュリティ及びプライバシー管理の管理策)
-- Certification
+- Certification standards
   - CC(Common Criteria)
     - ISO 15408
     - ST(Security Targets)/TOE: 対象の製品，製品のセキュリティコントロールを特定する文書
@@ -78,6 +186,8 @@ markmap:
       - ALE5: 半正式的に設計 & テスト
       - ALE6: 半正式的に検証済みの設計 & テスト
       - ALE7: 正式に検証された設計 & テスト
+  - ITSEC
+  - TCSEC(Orange Book)
 - Security Model
   - Enterprise
     - ToGAF
@@ -186,7 +296,7 @@ markmap:
     - Water💧
       - Pipe segregation
       - Avoid near rivers
-# Domain 4
+# Domain 4 <!-- markmap: fold -->
 - Network architecture
   - Internet
     - GAN
@@ -315,7 +425,7 @@ markmap:
     - Fiber Optic
     - Twisted Pair
     - Coaxial
-# Domain 5
+# Domain 5 <!-- markmap: fold -->
 - Pricipals of Access Control
   - Least Privilege
   - Separation of Duties
@@ -422,7 +532,7 @@ markmap:
   - Policy Engine
   - Policy Administrator
   - Policy Enforcement Point
-# Domain 6
+# Domain 6 <!-- markmap: fold -->
 - Vulnabilities assessment
   - SCAP
     - CWE
@@ -444,7 +554,13 @@ markmap:
     - Graybox
     - Blackbox
   - DAST
+    - Fuzzing
+      - Generation/Intelligence
+      - Dumb
+    - Sandbox
   - SAST
+  - IAST
+  - RASP
   - Tools
     - Vulnerabilities scanner
       - Nessus
@@ -462,7 +578,7 @@ markmap:
       - dirb
       - ffuf
       - gobuster
-# Domain 7
+# Domain 7 <!-- markmap: fold -->
 - Collect & Control Evidence
   - Locard's Priciples
   - Digital Forensics
@@ -582,7 +698,12 @@ markmap:
     - Mutation testing
   - Planning
   - Documentation
-# Domain 8
+  - Controls
+    - Request control: ユーザが変更をリクエストし，マネージャが効果を分析し，開発者がタスク順位付けできている
+    - Change control: 複数の開発者がソリューションを作成してテスト可能
+    - Release control: 全変更が理解されていて，受入テストか含まれる
+    - Structure control: ソフトウェアのバージョン変更がCMに従っている
+# Domain 8 <!-- markmap: fold -->
 - SLC
   - SDLC
     - Concept definition
