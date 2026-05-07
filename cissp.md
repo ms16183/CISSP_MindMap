@@ -16,11 +16,11 @@ markmap:
 - Privacy
   - IP(Intellectual Property)
     | 種類                       | 法規制                    | 管轄    | 有効期限        | 保護対象     |
-    | ------------------------ | ---------------------- | ----- | ----------- | -------- |
+    | ------------------------ | ---------------------- | :---: | ----------- | -------- |
     | 商標(TradeMark, (TM), (R)) | Lanham Act             | USPTO | 更新可能        | ロゴ，スローガン |
-    | 特許(Patent)               | -                      | USPTO | 20年         | 発明       |
-    | 営業秘密(Trade Secret)       | Economic Espionage Act | -     | 無し          | 営業秘密     |
-    | 著作権(Copyright, (C))      | DMCA                   | -     | 70年or没後 50年 | 創作物      |
+    | 特許(Patent)               | -                      | USPTO | 20年         | 発明，プロセス      |
+    | 営業秘密(Trade Secret)      | Economic Espionage Act | -     | 無し          | 営業秘密     |
+    | 著作権(Copyright, (C))      | DMCA                   | -     | 70年or没後 50年 | 創作物，コード，文書      |
   - Licenses
     - DMCA
   - Import/Export
@@ -31,6 +31,10 @@ markmap:
       - 域外適用(米国→日本→第三国でも規制適用)
   - EU laws
     - GDPR
+      - 72h rule: 72h以内に個人データ侵害を通知するルール
+      - Adequacy decision: 十分性認定
+        - SCC(SDPC): 十分性認定が無い場合に採用する契約条項
+        - BCR: 企業の内部部門間でのデータ転送を規制する企業規則
       - Lawfulness, fairness and transparency: 法的根拠を持って，オープンかつ誠実にデータを扱うこと
       - Purpose limitation: データ収集の目的を文書化して開示すること
       - Data minimization: 目的達成のために必要な最小限のデータのみを保持すること
@@ -115,7 +119,7 @@ markmap:
            - Technical control
              - Administrative control
     3. Threatment
-       - Tranfser
+       - Transfer
          - Cyber security insurance
        - Mitigate
          - Safeguards
@@ -143,7 +147,7 @@ markmap:
   - Data user
   - Data controller
   - Data processer
-  - <img src="./imgs/data_role.png" width="50%">
+  - ![](./imgs/data_role.png)
 - Data lifecycle
   1. Classify
      - Security document
@@ -154,7 +158,7 @@ markmap:
        - Procedure
      - Labeling: system readable
        | Level  | Government   | Nongovernment |
-       | ------ | :----------- | :------------ |
+       | :----- | :----------- | :------------ |
        | Class3 | Top Secret   | Confidential  |
        | Class2 | Secret       | Private       |
        | Class1 | Confidential | Sensitive     |
@@ -169,9 +173,7 @@ markmap:
          - Backups to DR site
        - Data in Transit
          - DLP
-         - TLS
-         - VPN
-         - Onion
+         - TLS/VPN/Onion
        - Data in Use
          - Print masking
          - Release on memory
@@ -181,14 +183,14 @@ markmap:
          - DR
          - CSP
   3. Sanitize
-     - NIST SIP 800-88 Rev
+     - NIST SP 800-88 Rev
        - Clearing💥
          - Formatting
          - Overwriting
          - Wipe
        - Purging💥💥
          - Degaussing
-         - ATA secure deletion
+         - ATA secure erase
          - Cryptographic shredding
        - Destruction🗑️
          - Shred✂️
@@ -670,22 +672,23 @@ markmap:
     - Convinicing(客観性)
     - Admissible(合法収集)
   - Evidence type
-    - 物的証拠
+    - Real evidence: 物的証拠
       - 物理的な証拠
         - USBメモリ/HDD
-    - 直接証拠
+    - Direct evidence: 直接証拠
       - 事件の事実を示す証拠
         - 有形/無形
         - 目撃者
         - 自白
         - Smoking gun(動かぬ証拠の慣用句)
-    - 二次的証拠
+    - Secnodary evidence: 二次的証拠
       - 原文から複製された証拠
         - 印刷されたログ
-    - 原則
-      - 最良証拠の原則
-      - 伝聞証拠排除の原則
-      - 口頭証拠排除の原則
+  - Ability
+    - Best evidence rule: 最良証拠の原則
+    - Hearsay rule: 伝聞証拠禁止の原則
+    - Parol evidence: 口頭証拠排除の原則
+  - Prohibit entrapment
 - Investigateions type
   - Civil(民事)
     - 裁判所による当事者間の争いの解決
@@ -726,12 +729,16 @@ markmap:
        - RPO
     2. Risk identification
        - Natural threats
+         - Flood
+         - Fires
        - Person-made threats
+         - Acts of terrorism
+         - Bombings/Explosions
     3. Likelihood assessment
        - $SLE = AV\times FE$
     4. Impact analysis
        - $ALE = ALO\times SLE$
-    5. Rsrouce prioritization
+    5. Resource prioritization
   - Plans
     - BCP(Business Continuity Plan)
     - DRP(Disaster Recovery Plan)
