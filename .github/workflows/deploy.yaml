@@ -29,7 +29,7 @@ jobs:
       - name: Build Markmap HTML
         run: |
           mkdir -p public
-          cp -r imgs public/
+          cp -r imgs public/ || true
           npx markmap-cli cissp.md --no-open -o public/index.html
 
       - name: Setup Pages

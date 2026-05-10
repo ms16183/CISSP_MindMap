@@ -13,6 +13,17 @@ markmap:
     2. 法律に違わず，公正かつ誠実に，責任を持って行動する．
     3. 当事者に対して十分かつ適切なサービスを提供する．
     4. 専門性を高め，維持する．
+- Governance
+  - COBIT
+  - SABSA
+  - PCI DSS
+  - FedRAMP
+  - ITIL
+  - 3rd party governance
+    - 組織が依存する3rdパーティに対するセキュリティ監視を実施する．
+    - 定められた目標，要件，契約等の義務を遵守されているか検証することに重点を置く．
+    - オープンな文書の交換とレビューをお互いが実施する．
+    - ATO(運用許可)を維持する．
 - Privacy
   - IP(Intellectual Property)
     | 種類                       | 法規制                    | 管轄    | 有効期限        | 保護対象     |
@@ -98,7 +109,7 @@ markmap:
     - Assess
     - Authorize
     - Monitor
-  - Risk management(NIST SP 800-30)
+  - Risk management(CISSP CBK, some frameworks are mixed)
     1. Asset valuation
        - Quantitative: 定量的
        - Qualitative: 定性的
@@ -108,7 +119,7 @@ markmap:
            $ALE = SLE\times ARO$
        - Qualitative
          - Delphi method
-         - Brainstoming
+         - Brainstorming
          - interviewing
        - Threats models
          - STRIDE
@@ -133,6 +144,18 @@ markmap:
            - Compsensating
        - Avoid
        - Accept
+    4. Assesment
+       - SCA(Security Control Assesment)
+         - NIST SP 800-53 Rev5
+       - Documentation
+         - Internal
+           - Risk matrix/heatmap
+           - Risk Registers
+           - KRI(Key Risk Indicator)
+         - External
+           - Risk exposure
+           - Policies and practices for risk management.
+           - Financial statements
   - COSO
   - ISACA Risk IT
   - ISO 31000
@@ -182,17 +205,18 @@ markmap:
        - Sites
          - DR
          - CSP
-  3. Sanitize
+  3. Destruction
      - NIST SP 800-88 Rev
-       - Clearing💥
-         - Formatting
-         - Overwriting
+       - Clear💥
+         - Format
+         - Zero fill
+         - Overwrite
          - Wipe
-       - Purging💥💥
+       - Purge💥💥
          - Degaussing
          - ATA secure erase
          - Cryptographic shredding
-       - Destruction🗑️
+       - Destroy💥💥💥️
          - Shred✂️
          - Incinerate🔥
          - Spoil⚗️
@@ -238,9 +262,9 @@ markmap:
 - Principles of safe design
   - Least Privilege
   - Defence in Depth
-    - Obscurity
-    - Data Hiding
-  - Segragation of Duties👥
+    - Obscurity🗯️
+    - Data Hiding🙈
+  - Segragation of Duties🧑‍🤝‍🧑
   - Dual Castory(Quorum Authentication)👥
     - M of N access control
   - PbD(privacy by Design)🤫
@@ -287,8 +311,10 @@ markmap:
     - Lipner
   - Rule Based
     - Clark-Wilson
-      - Integrity Veification Procedure
-      - Transformation Procedure
+      - CDI(Constrained Data Item)
+      - UDI(Unconstrained Data Item)
+      - IVP(Integrity Veification Procedure)
+      - TP(Transformation Procedure)
     - Brewer-Nash
     - Graham-Denning
     - Harrison-Ruzzo-Ullman
@@ -381,28 +407,40 @@ markmap:
       - Pipe segregation
       - Avoid near rivers
 # Domain 4 <!-- markmap: fold -->
-- Network architecture
-  - Internet
-    - GAN
-    - WAN
-    - MAN
-    - LAN
-    - PAN
-  - Intranet
-  - Extranet
-    - Network sharing with stakeholders
-- Netrwork topology
-  - Bus
-  - Star
-  - Ring
-  - Mesh
-  - Tree
-- Transport architecture
-  - Cut-Thorugh
-  - Store-and-Forward
-- Traffic flow
-  - North-South traffic
-  - East-West traffic
+- Architecture
+  - QoS
+    - Latency
+    - Throughput
+    - S/N ratio
+  - Network architecture
+    - Internet
+      - GAN
+      - WAN
+      - MAN
+      - LAN
+      - PAN
+    - Intranet
+    - Extranet
+      - Network sharing with stakeholders
+  - Transport architecture
+    - Cut-Thorugh
+    - Store-and-Forward
+  - Traffic flow
+    - North-South traffic
+    - East-West traffic
+  - Topologies
+    - Bus
+    - Star
+    - Ring
+    - Mesh
+    - Tree
+  - Devices
+    - Jumpbox(bastion)
+    - Gateway
+    - Router
+    - Switching hub
+    - Repeater hub
+    - Amplifier
 - Netowork Authentication
   - IEEE 802.1X
     - PAP
@@ -413,10 +451,6 @@ markmap:
       - EAP-POTP
       - TLS
 - Wireless
-  - Satcom(Satellite Communication)
-    - LEO
-    - MEO
-    - GEO
   - IEEE 802.11(Wi-Fi)
     - Frequency
       - 2.4GHz
@@ -430,14 +464,25 @@ markmap:
         - n
     - Encryption
       - WEP
-      - TKIP
-      - WPA/WPA2
+        - RC4
+        - ⚠️Short IV
+        - ⚠️All devices connected same AP share a same key
+      - WPA
+        - TKIP
+          - RC4
+      - WPA2
+        - CCMP(Counter mode with CBC-MAC Protocol)
+          - AES Encryption
+          - MIC(Message Integrity Check)
       - WPA3
         - SAE(Simultaneous Authentication Of Equals)
         - Enterprise
           - IEEE 802.1X
             - RADIUS
+          - GCMP(Galois/Counter Mode Protocol)
         - Personal
+          - Pre-Shared Key
+          - CCMP
     - Setup
       - WPS(Wiress Protected Setup)
     - Topology
@@ -451,20 +496,20 @@ markmap:
   - IEEE 802.15.1(Bluetooth)
     - iBeacon
     - Zigbee
-      - 128-bit Synmetric encription
+      - 128-bit Symmetric encryption
   - IEEE 802.16(WiMMax)
   - RFID
     - NFC
       - WPA2/WPA3
+  - Satcom(Satellite Communication)
+    - LEO
+    - MEO
+    - GEO
 - Voice Communication
   - PSTN(Public Switched Telephone Network)
     - PBX(Private branch eXchange)
   - VoIP
   - Vishing
-- QoS
-  - Latency
-  - Throughput
-  - S/N ratio
 - OSI reference model
   - Application
     - HTTP/HTTPS
@@ -506,9 +551,12 @@ markmap:
     - CHAP
     - EAP
   - Physical
-    - Fiber Optic
-    - Twisted Pair
-    - Coaxial
+    - |Physical|Baseband|Broadband|
+      |:----|:----|:----|
+      |Coaxial|10BASE5 / 10BASE2|10BROAD36 / DOCSIS|
+      |Unsheild Twisted Pair|10BASE-T / 1000BASE-T|ADSL (ITU-T G.992.x)|
+      |Sheild Twisted Pair|Token Ring (IEEE 802.5) / 10GBASE-T|VDSL (ITU-T G.993.x)|
+      |Fiber Optic|1000BASE-SX / LX / 10GBASE-SR|WDM / DWDM (ITU-T G.694.x)|
 # Domain 5 <!-- markmap: fold -->
 - IAAA
   - Identify
@@ -535,21 +583,21 @@ markmap:
     - Something You Are(Type III)
       - Biometrics
         - Zephyr Chart
-        - Retina
+        - Retina👁️
           - *PHI Privacy*
-        - Iris
-        - Vasucular pattern
-        - Fingerprint
-        - Facial
-        - Voice
+        - Iris👁️
+        - Vasucular pattern🫀
+        - Fingerprint🫵
+        - Facial😐
+        - Voice💬
         - Parameters
           - FRR(False Reject Rate(Type I))
           - FAR(False Accept Rate(Type II))
           - CEE(Crossover Error Rate)
       - Dynamics
-        - Keystroke
-        - Mouse
-        - Gait
+        - Keystroke⌨️
+        - Mouse🖱️
+        - Gait🚶‍♂️
     - Somewhere You Are(Type IV)
       - IP Geolocation
       - GPS
@@ -660,10 +708,20 @@ markmap:
       - gobuster
 # Domain 7 <!-- markmap: fold -->
 - Collect & Control Evidence
-  - Locard's Priciples
+  - Locard's Priciples: 異なる物が接触すると，必ずその接触痕跡を残す原理
   - Digital Forensics
     - Chain of custody
   - eDiscovery
+    - EDRM
+      1. Information Governance: eDiscoveryのために情報が整理されていることを確認
+      1. Identification: 証拠開示に適切に応答できる情報の識別
+      1. Preservation: 証拠となる情報を保護
+      1. Collection: 情報を一元収集
+      1. Processing: スクリーニングを実施し，必要な情報のみ抽出
+      1. Review: レビュー
+      1. Analysis: 分析
+      1. Production: : 情報を他人と共有できるような形式に変換し，共有
+      1. Presentation: 情報を開示
 - Evidence
   - Evidence Rule
     - Authentic(真正性)
@@ -706,11 +764,11 @@ markmap:
   - NIST SP 800-61
     1. Detection
        - IDS/IPS/SIEM/DLP/XDR
-       - Hotline/Reporting desk
+       - 通報窓口の設置
     2. Response
-       - Responses the CSIRT
+       - CSIRTへの連絡
     3. Mitigation
-       - Solve the problem
+       - 問題の解消
        - 被害の最小限化
     4. Reporting
        - 組織内外への報告
@@ -731,9 +789,11 @@ markmap:
        - Natural threats
          - Flood
          - Fires
+         - Typhoon
        - Person-made threats
          - Acts of terrorism
          - Bombings/Explosions
+         - Strike
     3. Likelihood assessment
        - $SLE = AV\times FE$
     4. Impact analysis
@@ -794,6 +854,15 @@ markmap:
     - Change control: 複数の開発者がソリューションを作成してテスト可能
     - Release control: 全変更が理解されていて，受入テストか含まれる
     - Structure control: ソフトウェアのバージョン変更がCMに従っている
+- SOC
+  - SSAE18
+    - | 区分 | SOC 1 (財務報告) | SOC 2 (セキュリティ等) | SOC 3 (セキュリティ等) |
+      | :--- | :--- | :--- | :--- |
+      | **主な対象** | 財務報告に係る内部統制 | セキュリティ、可用性、処理の整合性、機密保持、プライバシー | SOC 2と同等 |
+      | **主な利用者** | ユーザー企業の財務諸表監査人 | ユーザー企業の経営層、顧客、規制当局 | 一般公開用 (誰でも閲覧可) |
+      | **詳細度** | 高 (詳細な制御記述あり) | 高 (詳細な制御記述あり) | 低 (要約版) |
+      | **Type 1** | 指定時点の設計評価 | 指定時点の設計評価 | 指定時点の設計評価 |
+      | **Type 2** | 一定期間の運用有効性評価 | 一定期間の運用有効性評価 | 一定期間の運用有効性評価 |
 # Domain 8 <!-- markmap: fold -->
 - SLC
   - SDLC
@@ -804,6 +873,7 @@ markmap:
       - Waterfall
         - Repeatable Watferfall
       - Spiral
+      - IPTs
       - Agile
         - Scrum
         - Kanban
@@ -856,3 +926,5 @@ markmap:
   - Input Validation on server side
   - Session Management
   - Polyinstantation
+# Attacks <!-- markmap: fold -->
+- Social
