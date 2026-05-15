@@ -103,12 +103,23 @@ markmap:
       - Target profile
   - RMF(NIST SP 800-37 Rev)
     - Prepare
+      - 組織全体のリスクアセスメントを実施し，共通管理策を特定する．
+      - システム境界を明らかにし，リスクアセスメントを行い，セキュリティ要件を特定する．
     - Categorize
+      - システムをCIAの観点から分析し，高・中・低に決定する．
     - Select
+      - システムの分類結果に基づき，ベースラインとなるセキュリティ管理策を選択する．
     - Implement
+      - セキュリティ管理策を実装する．
+      - セキュリティ管理策の変更内容を文書化する．
     - Assess
+      - セキュリティ管理策が正しく実装されているかをアセスメントする．
+      - アセスメント結果によって是正活動を行う．
     - Authorize
+      - 上記ステップで得られたセキュリティ管理策によって低減されるリスクが受容可能であれば運用が認可される．
+      - 運用認可責任者は，対象システムの運用によって生じるリスクを受容可能に収める責任を負う．
     - Monitor
+      - 継続してアセスメントし，必要な場合はリスク対応の取り組みを実施する．
   - Risk management(CISSP CBK, some frameworks are mixed)
     1. Asset valuation
        - Quantitative: 定量的
@@ -906,10 +917,10 @@ markmap:
     - Implementation
     - Verification
     - Operations
-
 - Acquire Softwares
   - SLA
   - MOU
+  - ISA(Interconnection Security Agreement)
   - Contracts
 - Vulnerabilities
   - SQLi
@@ -926,5 +937,3 @@ markmap:
   - Input Validation on server side
   - Session Management
   - Polyinstantation
-# Attacks <!-- markmap: fold -->
-- Social
