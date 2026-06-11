@@ -235,6 +235,17 @@ markmap:
   4. Assess & Review
 # Domain 3 <!-- markmap: fold -->
 - Cryptography
+  - Concepts
+    - IV/Nonce
+    - Key clustering
+    - Work factor
+      - 解読の労力
+    - Confusion
+      - 暗号と鍵の対応をマッピングできないようにすること
+    - Dissusion
+      - 平文1bitの変化が暗号文全体へ広がる性質
+      - Avalanche effect
+        - 平文1bitの変化が暗号文の50%異常が変化する性質
   - Hashing
     - MD5
     - SHA-1
@@ -251,9 +262,13 @@ markmap:
       - Algorithm
         - DES
         - 2DES
+          - Meet in the Middle attack
         - 3DES
-        - AES(Rijndael)
         - Blowfish
+        - Rijndael(★AES)
+        - CAST-256
+        - RC6
+        - MARS
     - Streaming
       - RC4
   - Asymmetric
@@ -908,9 +923,13 @@ markmap:
     - Initial
     - Repeatable
     - Defined
+      - 文書化
+      - 積極的
     - Managed
       - 定量評価
     - Optimizing
+      - 自動化
+      - 継続的な改善
   - SAMM(Software Assurance Maturity Model)
     - Governance
     - Design
