@@ -54,6 +54,14 @@ markmap:
         - 忘れられる権利: ユーザの要求に従ってデータを削除する．
       - Integrity and confidentiality: 完全性と機密性を保持すること
       - Accountability: データへのアクションについて説明責任が伴うこと
+      - Transfer
+        - Adequacy Decision(十分性認定): GDPRと同等以上の保護がある場合
+        - SCC(Standard Contractual Clauses): GDPRと同等の保護義務契約の雛型
+        - to US
+          - ~~Safe harboar~~(2000~2015)
+          - ~~Privacy Shield~~(2016~2020)
+          - SCC(2020~2023)
+          - DPF(Data Privacy Framework)(2023~)
   - US laws
     - SOX: 上場企業へ財務報告の透明性及び文書化を定めた法律
     - GLBA(Gramm-Leach-Bliley Act): 金融業での顧客情報共有時のセキュリティを強化する法律
@@ -66,8 +74,12 @@ markmap:
     - COPPA: 児童オンラインプライバシー保護法
     - HIPAA: 医療保険の相互運用及び説明責任に関する法律
       - プライバシーに焦点
+      - BAA(Business Associate Agreement)が必要
     - HITECH: 経済的及び臨床的健全性のための医療情報技術に関する法律
       - セキュリティに焦点
+      - 漏洩通知義務
+      - BAAを契約した委託先にも直接責任
+      - 罰則強化
     - FISMA: 連邦情報セキュリティ管理法
     - CFAA: コンピュータ不正行為防止法
     - CCPA: カリフォルニア消費者プライバシー法
