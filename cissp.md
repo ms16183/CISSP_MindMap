@@ -489,6 +489,8 @@ markmap:
       - EAP-POTP
       - TLS
 - Wireless
+  - IEEE 802.11(Li-Fi)
+    - Light
   - IEEE 802.11(Wi-Fi)
     - Frequency
       - 2.4GHz
