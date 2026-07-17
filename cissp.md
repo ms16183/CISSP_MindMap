@@ -624,8 +624,11 @@ markmap:
       - Biometrics
         - Zephyr Chart
         - Retina👁️
-          - *PHI Privacy*
-        - Iris👁️
+          - PHI Privacy
+          - Best Quality
+          - High Cost
+          - Invasive
+        - Iris🌈
         - Vasucular pattern🫀
         - Fingerprint🫵
         - Facial😐
