@@ -137,6 +137,7 @@ markmap:
        - Quantitative: 定量的
        - Qualitative: 定性的
     2. Risk analysis
+       - Risk appetite
        - Quantitative
          - $SLE = AV\times EF$
            $ALE = SLE\times ARO$
@@ -145,9 +146,26 @@ markmap:
          - Brainstorming
          - interviewing
        - Threats models
-         - STRIDE
-         - DREAD
          - PASTA
+         - STRIDE
+           - Spoofing
+           - Tampering
+           - Repudiation
+           - Information disclosure
+           - Denial of service
+           - Escalation of privilege:w
+         - DREAD
+           - Damage potential
+           - Reproducibility
+           - Exploitability
+           - Affected user
+           - Discoverability
+         - VAST
+           - Vulnerability
+           - Adversary
+           - Security controls
+           - Tactics
+         - Trike
        - Controls
          - Physical control
            - Technical control
@@ -180,6 +198,16 @@ markmap:
            - Policies and practices for risk management.
            - Financial statements
   - COSO
+    - 目的
+      - 業務
+      - 報告
+      - 法令遵守
+    - 構成要素
+      - 統制環境
+      - リスク評価
+      - 統制活動
+      - 情報伝達
+      - モニタリング活動
   - ISACA Risk IT
   - ISO 31000
   - TARA
@@ -337,6 +365,10 @@ markmap:
 - Security Model
   - Enterprise
     - ToGAF
+      - Business architecture
+      - Data architecture
+      - Application architecture
+      - Technical architecture
     - Zachman
     - Sabsa
   - Lattice Based(MAC)
