@@ -29,46 +29,45 @@ markmap:
     | 種類                       | 法規制                    | 管轄    | 有効期限        | 保護対象     |
     | ------------------------ | ---------------------- | :---: | ----------- | -------- |
     | 商標(TradeMark, (TM), (R)) | Lanham Act             | USPTO | 更新可能        | ロゴ，スローガン |
-    | 特許(Patent)               | -                      | USPTO | 20年         | 発明，プロセス      |
-    | 営業秘密(Trade Secret)      | Economic Espionage Act | -     | 無し          | 営業秘密     |
-    | 著作権(Copyright, (C))      | DMCA                   | -     | 70年or没後 50年 | 創作物，コード，文書      |
+    | 特許(Patent)               | -                      | USPTO | 20年(出願日起算)         | 発明，プロセス      |
+    | 営業秘密(Trade Secret)      | Economic Espionage Act / DTSA(Defend Trade Secrets Act) | -     | 無し(秘密が維持される限り)          | 営業秘密     |
+    | 著作権(Copyright, (C))      | Copyright Act(DMCAはデジタル著作権管理に関する改正法)   | U.S. Copyright Office     | 著作者没後70年 or 職務著作は公表後95年/創作後120年 | 創作物，コード，文書      |
   - Licenses
     - DMCA
   - Import/Export
-    - COCOM: 冷戦時代にNATOからWTOへの輸出を抑制する委員会
-    - Wassenaar Arrangement: 通常兵器の蓄積を防止するための，輸入出品を追跡する仕組み
+    - COCOM: 冷戦時代の輸出管理委員会．西側諸国(NATO加盟国+日本等)から東側諸国(ワルシャワ条約機構)への戦略物資の輸出を規制．1994年に解消し，後継としてWassenaar Arrangementが発足．
+    - Wassenaar Arrangement: 通常兵器及びデュアルユース(軍民両用)品目の過剰な蓄積を防止するため，輸出品を追跡する多国間の枠組み
       - 暗号化製品も対象
     - EAR
       - 域外適用(米国→日本→第三国でも規制適用)
   - EU laws
     - GDPR
-      - 72h rule: 72h以内に個人データ侵害を通知するルール
-      - Adequacy decision: 十分性認定
-        - SCC(SDPC): 十分性認定が無い場合に採用する契約条項
-        - BCR: 企業の内部部門間でのデータ転送を規制する企業規則
-      - Lawfulness, fairness and transparency: 法的根拠を持って，オープンかつ誠実にデータを扱うこと
-      - Purpose limitation: データ収集の目的を文書化して開示すること
-      - Data minimization: 目的達成のために必要な最小限のデータのみを保持すること
-      - Accuracy: データを正確に維持すること
-      - Storage limitation: 必要な期間のみデータを保持すること
-        - 忘れられる権利: ユーザの要求に従ってデータを削除する．
-      - Integrity and confidentiality: 完全性と機密性を保持すること
-      - Accountability: データへのアクションについて説明責任が伴うこと
-      - Transfer
-        - Adequacy Decision(十分性認定): GDPRと同等以上の保護がある場合
-        - SCC(Standard Contractual Clauses): GDPRと同等の保護義務契約の雛型
-        - to US
-          - ~~Safe harboar~~(2000~2015)
-          - ~~Privacy Shield~~(2016~2020)
-          - SCC(2020~2023)
-          - DPF(Data Privacy Framework)(2023~)
+      - 72h rule: 72h以内に監督機関へ個人データ侵害を通知するルール
+      - Principles(第5条の原則)
+        - Lawfulness, fairness and transparency: 法的根拠を持って，オープンかつ誠実にデータを扱うこと
+        - Purpose limitation: データ収集の目的を文書化して開示すること
+        - Data minimization: 目的達成のために必要な最小限のデータのみを保持すること
+        - Accuracy: データを正確に維持すること
+        - Storage limitation: 必要な期間のみデータを保持すること
+          - 忘れられる権利: ユーザの要求に従ってデータを削除する．
+        - Integrity and confidentiality: 完全性と機密性を保持すること
+        - Accountability: データへのアクションについて説明責任が伴うこと
+      - Transfer(越境移転の仕組み)
+        - Adequacy Decision(十分性認定): 移転先国がGDPRと同等以上の保護水準を持つと欧州委員会が認定した場合，追加措置無しで移転可能
+        - SCC(Standard Contractual Clauses): 十分性認定が無い場合に採用する，GDPRと同等の保護義務を課す契約の雛型
+        - BCR(Binding Corporate Rules): 多国籍企業のグループ内データ移転を規律する拘束的企業ルール
+        - to US(EU-US間データ移転の変遷)
+          - ~~Safe Harbor~~(2000~2015): Schrems I判決により無効化
+          - ~~Privacy Shield~~(2016~2020): Schrems II判決により無効化
+          - SCC(2020~2023): 暫定的な代替措置
+          - DPF(Data Privacy Framework)(2023~): 現行の枠組み
   - US laws
     - SOX: 上場企業へ財務報告の透明性及び文書化を定めた法律
     - GLBA(Gramm-Leach-Bliley Act): 金融業での顧客情報共有時のセキュリティを強化する法律
-    - Amendent 4: 不当な捜査・押収から市民を保護する修正条文
-    - USA patriot Act: テロ抑止を目的とした法律
-      - CALEA: プロバイダ等の通信会社が政府の通信傍受を援助する
-      - CLOUD: 国境を越えて企業が保有するデータへのアクセス手順を定めた法律
+    - 4th Amendment(修正第4条): 不当な捜査・押収から市民を保護する憲法修正条文
+    - USA patriot Act: 米国同時多発テロを受け，テロ抑止を目的として2001年に制定された法律
+    - CALEA(1994年制定，Patriot Actとは別の法律): プロバイダ等の通信会社に対し，政府による通信傍受を技術的に援助する義務を課す
+    - CLOUD Act(2018年制定，Patriot Actとは別の法律): 国境を越えて米国企業が保有するデータへの捜査機関のアクセス手順を定めた法律
     - ECPA: 電子通信プライバシー法
     - FERPA: 家族教育権利及びプライバシー法
     - COPPA: 児童オンラインプライバシー保護法
@@ -153,7 +152,7 @@ markmap:
            - Repudiation
            - Information disclosure
            - Denial of service
-           - Escalation of privilege:w
+           - Elevation of privilege
          - DREAD
            - Damage potential
            - Reproducibility
@@ -166,11 +165,11 @@ markmap:
            - Security controls
            - Tactics
          - Trike
-       - Controls
+       - Controls(統制カテゴリ，並列の分類)
          - Physical control
-           - Technical control
-             - Administrative control
-    3. Threatment
+         - Technical control
+         - Administrative control
+    3. Treatment
        - Transfer
          - Cyber security insurance
        - Mitigate
@@ -215,12 +214,12 @@ markmap:
   - OCTAVE
 # Domain 2 <!-- markmap: fold -->
 - Data role
-  - Data owner
-  - Data steward
-  - Data custodian
-  - Data user
-  - Data controller
-  - Data processer
+  - Data owner: 分類・取扱方針を決定する責任者(例: 人事VP)
+  - Data steward: データ品質・分類ルール遵守を管理(例: ビジネスアナリスト)
+  - Data custodian: バックアップ等技術的な維持管理(例: DBA)
+  - Data user: 業務でデータを利用する一般利用者(例: サポート担当)
+  - Data controller(GDPR): 処理目的・方法を決定する主体(例: 事業会社)
+  - Data processor(GDPR): コントローラの指示で処理する主体(例: 委託先CSP)
   - ![](./imgs/data_role.png)
 - Data lifecycle
   1. Classify
@@ -282,10 +281,10 @@ markmap:
       - 解読の労力
     - Confusion
       - 暗号と鍵の対応をマッピングできないようにすること
-    - Dissusion
+    - Diffusion
       - 平文1bitの変化が暗号文全体へ広がる性質
       - Avalanche effect
-        - 平文1bitの変化が暗号文の50%異常が変化する性質
+        - 平文1bitの変化が暗号文の50%以上が変化する性質
   - Hashing
     - MD5
     - SHA-1
@@ -299,6 +298,7 @@ markmap:
         - CFB
         - OFB
         - CTR
+        - GCM(AEAD)
       - Algorithm
         - DES
         - 2DES
@@ -323,7 +323,7 @@ markmap:
     - Caesar Cypher
     - Substitution Cypher
     - Steganography
-  - Oracle
+  - Others
     - One-time Pads
 - Principles of safe design
   - Least Privilege
@@ -352,14 +352,14 @@ markmap:
     - ISO 15408
     - ST(Security Targets)/TOE: 対象の製品，製品のセキュリティコントロールを特定する文書
     - PP(Protection Profile): 製品のセキュリティ要件が書かれた文書
-    - EAL
-      - ALE1: 機能的保証
-      - ALE2: 構造的保証
-      - ALE3: 系統的にテスト & チェック
-      - ALE4: 系統的に設計 & テスト & レビュー
-      - ALE5: 半正式的に設計 & テスト
-      - ALE6: 半正式的に検証済みの設計 & テスト
-      - ALE7: 正式に検証された設計 & テスト
+    - EAL(Evaluation Assurance Level)
+      - EAL1: 機能的にテスト済み
+      - EAL2: 構造的にテスト済み
+      - EAL3: 方式に基づきテスト & チェック済み
+      - EAL4: 方式に基づき設計 & テスト & レビュー済み
+      - EAL5: 準形式的に設計 & テスト済み
+      - EAL6: 準形式的に検証済みの設計 & テスト済み
+      - EAL7: 形式的に検証済みの設計 & テスト済み
   - ITSEC
   - TCSEC(Orange Book)
 - Security Model
@@ -421,11 +421,11 @@ markmap:
       - Tripped Lighting
     - Monitoring
       - CCTV
-      - Passive RIP sensor
+      - Passive IR sensor(赤外線感知)
       - Wave motion sensor
       - Sound sensor
       - BMS
-      - RIP Linear Beam sensor
+      - IR Linear Beam sensor(赤外線ビーム感知)
     - Locks
     - Fencing
       - High fence
@@ -448,10 +448,10 @@ markmap:
       - Dual degradation
     - HVAC(Heat, Ventilation, Air Conditioning)🌡️️☁🍃
       - Static electricity
-      - Chip cleap
-      - Cold/Hot Aile
+      - Chip creep
+      - Cold/Hot Aisle
     - Fire🔥
-      - Exitinguisher
+      - Extinguisher
         - A: 可燃物
         - B: 液体
         - C: 電気
@@ -459,7 +459,7 @@ markmap:
         - K: キッチン
       - Sprinkler
         - Wet
-        - Practive
+        - Pre-action
         - Dry
         - Deluge: 一斉開放
       - AFFF(Aqueous Firefighting Foam)
@@ -512,14 +512,15 @@ markmap:
     - Repeater hub
     - Amplifier
 - Netowork Authentication
-  - IEEE 802.1X
+  - PPP(Point-to-Point Protocol)
     - PAP
     - CHAP
+  - IEEE 802.1X(ポートベース認証，EAPを利用)
     - EAP
       - LEAP
       - PEAP
       - EAP-POTP
-      - TLS
+      - EAP-TLS
 - Wireless
   - IEEE 802.11(Li-Fi)
     - Light
@@ -567,9 +568,9 @@ markmap:
         - Roaming
   - IEEE 802.15.1(Bluetooth)
     - iBeacon
-    - Zigbee
-      - 128-bit Symmetric encryption
-  - IEEE 802.16(WiMMax)
+  - IEEE 802.15.4(Zigbee)
+    - 128-bit Symmetric encryption
+  - IEEE 802.16(WiMAX)
   - RFID
     - NFC
       - WPA2/WPA3
@@ -592,7 +593,7 @@ markmap:
       - A/AAAA
       - MX
       - CNAME
-      - SOR
+      - SOA
     - SNMP
     - SMTP
     - POP3
@@ -747,7 +748,7 @@ markmap:
   - Microsoft Security Bulletins
   - ~~Bugtraq~~
 - Penetration testing
-  - NIST SP 800-114
+  - NIST SP 800-115
     - Planning
     - Discoery
     - Attack
@@ -870,9 +871,10 @@ markmap:
          - Bombings/Explosions
          - Strike
     3. Likelihood assessment
-       - $SLE = AV\times FE$
+       - $ARO$(Annual Rate of Occurrence)を見積もる
     4. Impact analysis
-       - $ALE = ALO\times SLE$
+       - $SLE = AV\times EF$
+         $ALE = SLE\times ARO$
     5. Resource prioritization
   - Plans
     - BCP(Business Continuity Plan)
@@ -1004,4 +1006,4 @@ markmap:
   - Code Review
   - Input Validation on server side
   - Session Management
-  - Polyinstantation
+  - Polyinstantiation
