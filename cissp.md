@@ -670,13 +670,15 @@ markmap:
           - FRR(False Reject Rate(Type I))
           - FAR(False Accept Rate(Type II))
           - CEE(Crossover Error Rate)
+    - Somewhere You Are(Type IV)
+      - IP Geolocation
+      - GPS
+    - Something You Do(Type V)
       - Dynamics
         - Keystroke⌨️
         - Mouse🖱️
         - Gait🚶‍♂️
-    - Somewhere You Are(Type IV)
-      - IP Geolocation
-      - GPS
+        - Signature✍️
   - Authorization
     - DAC
     - MAC(Ratice based)
